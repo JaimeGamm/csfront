@@ -1,0 +1,629 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fe6601 #ffffff;
+}
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 14px;
+}
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #fe6601;
+  border-radius: 82px;
+  border: 3px outset #000000;
+}
+.nav-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.4rem;
+  height: 9vh;
+  min-height: fit-content;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.img-icon{
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+}
+
+.img-center-container{
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-center{
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.img-icon img{
+  width: 100%;
+  height: 100%;
+}
+.modal{
+  backdrop-filter: blur(20px);
+  position:fixed;
+  padding:0px;
+  margin:0;
+
+  top:0;
+  left:0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(61, 61, 61, 0.467);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .form-normal{
+  min-width: 70vw;
+  max-width: 70vw;
+  margin: auto;
+  padding: 20px;
+}
+
+.menu{
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  background-color: #212121;
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 40vw;
+  height: 100%;
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+.menu-button{
+  width:  30px;
+  height: 30px;
+  font-family: 'Cabin';
+  font-size: 1.4rem;
+  padding: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: transparent 1px solid;
+  border-radius: 50px;
+  background-color: transparent;
+  color: white;
+}
+
+.menu-button:hover{
+  background-color: #f4f4f4;
+  border: #f4f4f4 solid 1px;
+  color: #212121;
+}
+
+.link-menu{
+  text-decoration: none;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-family: 'Cabin';
+  color: white;
+  font-size: 1.9rem;
+  cursor: pointer;
+}
+
+.link-menu-orange{
+  text-decoration: none;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-family: 'Cabin';
+  color: white;
+  font-size: 1.9rem;
+  cursor: pointer;
+  background-color: #fe6601;
+}
+
+.nav-principal span {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: 'Be Vietnam Pro';
+}
+
+.mini-logo{
+  width: 6vh;
+  height: auto;
+}
+/*----------------------------------DIVS-----------------------------*/
+.attendance-div{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.tintatron-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 420px;
+}
+
+#about{
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+}
+
+.about-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-container img{
+  width: 50vw;
+  height: auto;
+  order: 1;
+  margin: 10px auto;
+}
+
+.about-container p{
+  padding: 20px;
+  margin-top: 10px;
+  order: 2;
+}
+
+#contact{
+  padding: 20px;
+}
+
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+}
+
+.contact-item{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60vw;
+  height: fit-content;
+  margin: 20px auto;
+}
+
+.contact-item img{
+  width: 256px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.contact-item span{
+  font-family: 'Roboto';
+  font-weight: bolder;
+  font-size: 1.9rem;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.contact-item p{
+  font-family: 'Roboto';
+  font-size: 1.9rem;
+  margin: 0 auto;
+}
+
+.portal{
+  
+  margin: 20px auto;
+  min-width: 90vw;
+  min-height: 70vh;
+  max-width: max-content;
+}
+
+.portal-container{
+  width: 80vh;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+.portal-select{
+  padding: 20px;
+  margin: auto;
+  width: 90vw;
+  max-width: 90vw;
+  min-height: 80vh;
+  max-height: max-content;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+}
+
+.progress-div{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+}
+.img-req{
+  width: 1.8rem;
+  height: auto;
+}
+.progress-card{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 0.5px solid #555353;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.progress-card h2{
+  text-align: center;
+  font-family: 'Be Vietnam Pro';
+  font-size: 1.8rem;
+}
+
+.progress-card div{
+  margin: 20px auto;
+  width: 50%;
+  height: auto;
+}
+
+.logout{
+  display: flex;
+  flex-direction: column;
+}
+
+.reports-container{
+  width: 85vw;
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.div-borde{
+  max-width: 80vh;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  border: 0.5px solid #555353;
+  border-radius: 10px;
+  margin: auto auto;
+  margin-bottom: 20px;
+}
+
+.div-borde .desc{
+  margin-top: 10px;
+  max-width: 70vw;
+}
+
+.eval-req{
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.eval-req p{
+  min-width: 70%;
+  max-width: 70%;
+}
+
+.eval-req input{
+  accent-color: green;
+  color: #ffffff;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/*-------------------------------------FORM----------------------------------*/
+form{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: fit-content;
+  border: 0.5px solid #555353;
+  border-radius: 10px;
+  margin: auto auto;
+}
+
+.form-normal{
+  background-color: #ffffff;
+  margin-top: 10px;
+  border: none;
+  width: 100%;
+  padding: 0px;
+}
+
+form h2{
+  margin-bottom: 10px;
+}
+
+form p{
+  margin-bottom: 10px;
+}
+
+form button{
+  margin-bottom: 10px;
+}
+
+.field-form{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.field-form p{
+  margin-left: 10px;
+  font-family: 'Be Vietnam Pro';
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.field-form input{
+  width: 100%;
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+  padding: 5px;
+  border: 0.5px solid #555353;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+
+.field-form textarea{
+  min-width: 100%;
+  max-width: 100%;
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+  padding: 5px;
+  border: 0.5px solid #555353;
+  border-radius: 5px;
+  box-shadow: none;
+  min-height: 4vh;
+}
+
+.field-form select{
+  width: 100%;
+  background-color: white;
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+  padding: 5px;
+  border: 0.5px solid #555353;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.option{
+  width: 100%;
+  background-color: white;
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.option:hover{
+  background-color: #212121;
+}
+
+.form-dark-button{
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  background-color: #212121;
+  font-size: 1.6rem;
+  padding: 10px;
+  border: transparent 1px solid;
+  border-radius: 10px;
+}
+
+.form-dark-button:hover {
+  background-color: transparent;
+  color: #212121;
+  border: #212121 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-orange-button{
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  background-color: #fe6601;
+  font-size: 1.6rem;
+  padding: 10px;
+  border: transparent 1px solid;
+  border-radius: 10px;
+}
+
+.form-black-button{
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  background-color: #212121;
+  font-size: 1.6rem;
+  padding: 10px;
+  border: transparent 1px solid;
+  border-radius: 10px;
+}
+
+.form-black-button:hover {
+  background-color: transparent;
+  color: #212121;
+  border: #212121 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-orange-button:hover {
+  background-color: transparent;
+  color: #fe6601;
+  border: #fe6601 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rdt_TableCol_Sortable{
+  text-align: center;
+}
+
+/*------------------------------------FOOTER---------------------------------*/
+
+footer{
+  background-color: #212121;
+  width: 100%;
+  height: 20vh;
+  max-height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p{
+  font-family: 'Be Vietnam Pro';
+  font-weight: bolder;
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-size: 4.5rem;
+}
+/*------------------------------------TEXTOS----------------------------------*/
+.title{
+  font-family: 'Be Vietnam Pro';
+  font-size: 2.4rem;
+  display: block;
+  width: 100%;
+}
+.form-title{
+  font-family: 'Be Vietnam Pro';
+  font-size: 2.4rem;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+.text-normal{
+  font-family: 'Roboto';
+  font-size: 1.8rem;
+  font-weight: normal;
+;
+
+}
+
+.text-bold{
+  font-family: 'Roboto';
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.red{
+  font-family: inherit;
+  color: red;
+}
+
+.rigth-align{
+  text-align: right;
+}
+
+.line{
+  text-decoration: line-through;
+}
+/*-------------------------------------BOTONES----------------------------------*/
+
+button{
+  font-family: 'Cabin';
+}
+.dark-button {
+  cursor: pointer;
+  color: white;
+  background-color: #212121;
+  font-size: 1rem;
+  padding: 10px;
+  border: transparent 1px solid;
+  transition: border-radius 300ms;
+}
+
+.dark-button:hover {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.big-orange-button {
+  cursor: pointer;
+  color: white;
+  background-color: #ff5f00;
+  font-size: 3.6rem;
+  padding: 30px;
+  padding: 10px;
+  border: transparent 1px solid;
+  transition: border-radius 300ms;
+}
+
+.big-orange-button:hover {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.orange-button {
+  cursor: pointer;
+  color: white;
+  background-color: #ff5f00;
+  font-size: 1.6rem;
+  padding: 10px;
+  border: transparent 1px solid;
+  transition: border-radius 300ms;
+}
+
+.orange-button:hover {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

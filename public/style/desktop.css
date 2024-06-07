@@ -1,0 +1,132 @@
+.link-nav-principal {
+    text-decoration: none;
+    font-family: 'Cabin';
+    margin-right: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.nav-principal span {
+    font-size: 4.2rem;
+}
+
+.tintatron-div{
+    height: 720px;
+}
+
+.big-orange-button{
+    font-size: 5.6rem;
+    padding: 40px;
+}
+
+.dark-button {
+    font-size: 1.6rem;
+}
+
+#about{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-container{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    width: 100%;
+    height: fit-content;
+    align-content: space-around;
+    border-bottom: #C4C4C4 solid 3px;
+}
+.about-container p{
+    order: 1;
+    width: 65%;
+}
+.about-container img{
+    width: 30%;
+    order: 2;
+    margin: 0 auto;
+}
+
+.contact-container{
+    flex-direction: row;
+}
+
+.contact-item{
+    width: 30vw;
+}
+
+footer p{
+    font-size: 6.5rem;
+}
+
+form{
+    width: 70vw;
+}
+
+
+.portal-container{
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.portal-menu{
+    width: 30%;
+    height: fit-content;
+    padding: 25px;
+}
+
+.portal-menu-item{
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #212121;
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Roboto';
+    cursor: pointer;
+}
+
+.portal-menu-item-selected{
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #fe6601;
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Roboto';
+    cursor: pointer;
+}
+.portal-menu-item:hover{
+    background-color: #fe6601;
+}
+.portal-select{
+    width: 70vw;
+    min-width: 70%;
+    height: fit-content;
+}
+
+.progress-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.progress-card{
+    width: 27%;
+}
+
+.reports-container{
+    max-width: 100%;
+}
+
+.div-borde{
+    max-width: 90%;
+}
